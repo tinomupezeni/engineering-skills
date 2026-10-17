@@ -35,6 +35,20 @@ Project adapters provide commands and environment facts without making the
 portable skills project-specific. Adapters are opt-in and must not contain
 secrets.
 
+## Project adoption
+
+Each adapter includes an `AGENTS-SNIPPET.md` for review before applying to a
+project. The safe installer updates the first existing `AGENTS.md` or
+`CLAUDE.md` in a target directory and refuses to create a new instruction file:
+
+```bash
+npm run install:baseline -- /path/to/project
+```
+
+Review the target worktree before running this command. It is intentionally
+not run automatically because project instruction files may contain local,
+uncommitted changes.
+
 ## Source synchronization
 
 `manifests/source-map.yaml` records the source guide files and the skill

@@ -6,7 +6,8 @@
   "scripts": {
     "validate": "node scripts/validate-skill-pack.js",
     "source:check": "node scripts/check-source-freshness.js",
-    "source:report": "node scripts/report-source-freshness.js"
+    "source:report": "node scripts/report-source-freshness.js",
+    "install:baseline": "node scripts/install-baseline.js"
   },
   "license": "MIT"
 }

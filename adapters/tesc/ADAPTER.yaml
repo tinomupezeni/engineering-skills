@@ -3,13 +3,18 @@ project: TESC
 repository: tinomupezeni/TESC
 stack: [django, postgres, react, docker-compose, celery]
 commands:
-  unit_tests: pytest
-  integration_tests: pytest
-  migration_preflight: ""
+  unit_tests: "cd backend && pytest"
+  integration_tests: "cd backend && pytest"
+  lint: "cd frontend && npm run lint"
+  typecheck: ""
+  migration_preflight: "cd backend && python manage.py makemigrations --check --dry-run"
+  migration_check: "cd backend && python manage.py migrate --check"
   staging_smoke: ""
 deployment:
   topology: self-hosted-vps-nginx
   artifact_identity: image-tag-and-commit-sha
+  staging_compose: "docker-compose.staging.yml"
+  production_compose: "docker-compose.prod.yml"
 known_baseline_failures:
   - "Institution AddStudentDialog frontend test timeouts require current verification."
-notes: "Project-specific commands must be verified before use."
+notes: "Commands derived from backend/manage.py, backend/requirements.txt, frontend/package.json, and compose manifests. Run from repository root."

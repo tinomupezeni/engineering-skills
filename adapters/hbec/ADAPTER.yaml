@@ -3,13 +3,18 @@ project: HBEC
 repository: tinomupezeni/HBEC
 stack: [django, fastapi, react, flutter, postgres, redis, docker-compose]
 commands:
-  unit_tests: pytest
-  lint: ""
+  unit_tests: "cd AGENTIC_HARNESS && .venv/Scripts/python.exe -m pytest tests/ -q -p no:schemathesis"
+  integration_tests: "cd AGENTIC_HARNESS && .venv/Scripts/python.exe -m pytest tests/integration/ -q -p no:schemathesis"
+  lint: "cd AGENTIC_HARNESS && ruff check app/ tests/"
   typecheck: ""
-  migration_preflight: ""
+  migration_preflight: "cd AGENTIC_HARNESS && alembic check"
+  migration_check: "cd AGENTIC_HARNESS && alembic upgrade head"
   staging_smoke: ""
 deployment:
   topology: two-compose-environments-on-one-vps
   artifact_identity: image-tag-and-commit-sha
-known_baseline_failures: []
-notes: "Complete commands and URLs only after verifying the current project repository."
+  staging_compose: "docker-compose.yml"
+  production_compose: "docker-compose.production.yml"
+known_baseline_failures:
+  - "The harness requires its own .venv and -p no:schemathesis."
+notes: "Commands verified from the root AGENTS.md; staging URL and smoke command remain intentionally unset."

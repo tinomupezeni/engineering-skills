@@ -3,13 +3,18 @@ project: SMEPulse
 repository: tinomupezeni/SMEPulse
 stack: [nextjs, prisma, vitest, supertest, postgres]
 commands:
-  unit_tests: ""
-  integration_tests: ""
-  contract_tests: ""
+  unit_tests: "npm test"
+  integration_tests: "npm run test:backend"
+  contract_tests: "npm run test:whatsapp"
+  lint: "npm run lint"
+  typecheck: "npm run type-check"
   migration_preflight: ""
-  staging_smoke: ""
+  migration_check: ""
+  staging_smoke: "npm run test:e2e"
 deployment:
-  topology: ""
+  topology: multi-portal-compose
   artifact_identity: commit-sha-or-image-digest
+  staging_compose: "docker-compose.staging.yml"
+  production_compose: "docker-compose.prod.yml"
 known_baseline_failures: []
-notes: "Populate after checking the current project repository."
+notes: "Commands verified from package.json and compose manifests. Database migration commands remain unset pending backend migration documentation."
