@@ -4,7 +4,9 @@
   "version": "0.1.0",
   "description": "Portable engineering skills for coding agents.",
   "scripts": {
-    "validate": "node scripts/validate-skill-pack.js"
+    "validate": "node scripts/validate-skill-pack.js",
+    "source:check": "node scripts/check-source-freshness.js",
+    "source:report": "node scripts/report-source-freshness.js"
   },
   "license": "MIT"
 }

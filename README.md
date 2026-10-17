@@ -41,6 +41,18 @@ secrets.
 surfaces derived from them. Updates to the canonical guide library should be
 reviewed against this map before changing the distribution repository.
 
+Check whether the distribution was generated from the latest canonical guide
+commit:
+
+```bash
+npm run source:check
+```
+
+This check is intentionally not part of the default validation gate. A newer
+guide commit means the skills need review; it must not silently regenerate or
+overwrite curated skill content. Use `npm run source:report` when opening that
+review.
+
 ## Repository layout
 
 ```text
