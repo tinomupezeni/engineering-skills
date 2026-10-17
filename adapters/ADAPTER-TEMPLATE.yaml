@@ -1,0 +1,22 @@
+version: 1
+project: replace-me
+repository: owner/name
+stack: []
+commands:
+  unit_tests: ""
+  integration_tests: ""
+  contract_tests: ""
+  lint: ""
+  typecheck: ""
+  migration_preflight: ""
+  migration_check: ""
+  staging_smoke: ""
+deployment:
+  topology: ""
+  staging_url: ""
+  production_url: ""
+  artifact_identity: commit-sha-or-image-digest
+  deploy_command: ""
+  rollback_command: ""
+known_baseline_failures: []
+notes: ""

@@ -1,0 +1,15 @@
+version: 1
+project: SMEPulse
+repository: tinomupezeni/SMEPulse
+stack: [nextjs, prisma, vitest, supertest, postgres]
+commands:
+  unit_tests: ""
+  integration_tests: ""
+  contract_tests: ""
+  migration_preflight: ""
+  staging_smoke: ""
+deployment:
+  topology: ""
+  artifact_identity: commit-sha-or-image-digest
+known_baseline_failures: []
+notes: "Populate after checking the current project repository."

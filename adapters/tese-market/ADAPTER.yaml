@@ -1,0 +1,14 @@
+version: 1
+project: TESE-MARKET
+repository: tinomupezeni/TESE-MARKET
+stack: [fastapi, react, vite, postgres, redis, nginx, traefik]
+commands:
+  unit_tests: ""
+  contract_tests: ""
+  migration_preflight: ""
+  staging_smoke: ""
+deployment:
+  topology: multi-service-bff
+  artifact_identity: image-digest
+known_baseline_failures: []
+notes: "Populate from the project's checked-in CLAUDE.md and DECISIONS_LOG."

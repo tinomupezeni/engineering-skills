@@ -1,0 +1,29 @@
+version: 1
+canonical_repository: tinomupezeni/SOFTWARE-ENGINEER
+canonical_path: Principal_Engineer/engineering-guides
+generated_from_commit: 40485a0
+skills:
+  engineering-baseline:
+    sources: [19, 20, 16]
+  task-contract:
+    sources: [20]
+  agent-delegation:
+    sources: [16]
+  issue-to-production:
+    sources: [19]
+  contract-integrity:
+    sources: [8, 11, 24]
+  deployment-truth:
+    sources: [10, 18, 19]
+  database-change-safety:
+    sources: [6, 22]
+  configuration-parity:
+    sources: [5b]
+  distributed-consistency:
+    sources: [22, 6]
+  observability-correctness:
+    sources: [5a, 4, 19]
+  security-boundaries:
+    sources: [7, 24]
+  ai-behavioral-correctness:
+    sources: [17, 21]

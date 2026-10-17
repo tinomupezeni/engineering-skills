@@ -1,0 +1,10 @@
+{
+  "name": "@tinomupezeni/engineering-skills",
+  "private": false,
+  "version": "0.1.0",
+  "description": "Portable engineering skills for coding agents.",
+  "scripts": {
+    "validate": "node scripts/validate-skill-pack.js"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,15 @@
+version: 1
+project: HBEC
+repository: tinomupezeni/HBEC
+stack: [django, fastapi, react, flutter, postgres, redis, docker-compose]
+commands:
+  unit_tests: pytest
+  lint: ""
+  typecheck: ""
+  migration_preflight: ""
+  staging_smoke: ""
+deployment:
+  topology: two-compose-environments-on-one-vps
+  artifact_identity: image-tag-and-commit-sha
+known_baseline_failures: []
+notes: "Complete commands and URLs only after verifying the current project repository."

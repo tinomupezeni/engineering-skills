@@ -1,0 +1,15 @@
+version: 1
+project: TESC
+repository: tinomupezeni/TESC
+stack: [django, postgres, react, docker-compose, celery]
+commands:
+  unit_tests: pytest
+  integration_tests: pytest
+  migration_preflight: ""
+  staging_smoke: ""
+deployment:
+  topology: self-hosted-vps-nginx
+  artifact_identity: image-tag-and-commit-sha
+known_baseline_failures:
+  - "Institution AddStudentDialog frontend test timeouts require current verification."
+notes: "Project-specific commands must be verified before use."

@@ -1,0 +1,22 @@
+version: 1
+default_skill: engineering-baseline
+skills:
+  - engineering-baseline
+  - task-contract
+  - agent-delegation
+  - issue-to-production
+  - contract-integrity
+  - deployment-truth
+  - database-change-safety
+  - configuration-parity
+  - distributed-consistency
+  - observability-correctness
+  - security-boundaries
+  - ai-behavioral-correctness
+bundles:
+  production-engineering-pack:
+    includes: [engineering-baseline, issue-to-production, contract-integrity, deployment-truth, database-change-safety, configuration-parity, observability-correctness, security-boundaries]
+  agent-engineering-pack:
+    includes: [engineering-baseline, task-contract, agent-delegation, contract-integrity, issue-to-production]
+  ai-systems-engineering-pack:
+    includes: [engineering-baseline, observability-correctness, ai-behavioral-correctness, security-boundaries, distributed-consistency]
