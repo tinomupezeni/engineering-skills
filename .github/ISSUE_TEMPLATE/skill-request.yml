@@ -1,0 +1,27 @@
+name: Skill or example request
+description: Suggest a portable engineering control or practical example.
+title: "[Request]: "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What repeatable failure mode should this address?
+      description: Explain what agents or teams currently get wrong.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: What evidence should prove it worked?
+      description: Describe the test, check, or artifact an agent should produce.
+    validations:
+      required: true
+  - type: textarea
+    id: portability
+    attributes:
+      label: Why is this portable?
+      description: Note any assumptions and how they can remain repository-agnostic.
+    validations:
+      required: true
